@@ -12,8 +12,8 @@ public class TestController {
     @RequestMapping("/api/helloworld")
     public ResponseEntity<BasicResponse> findAll(){
         BasicResponse result = new BasicResponse();
-        result.setCode(1234);
-        result.setMsg("asdfasdfasdf");
+        result.setCode(200);
+        result.setMsg("nueva respuesta");
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
