@@ -13,7 +13,7 @@ public class TestController {
     public ResponseEntity<BasicResponse> findAll(){
         BasicResponse result = new BasicResponse();
         result.setCode(200);
-        result.setMsg("nueva respuesta 2");
+        result.setMsg("nueva respuesta 3");
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
 }
