@@ -69,7 +69,7 @@
 					</includes>
 					<jdkVersion>${java.version}</jdkVersion>
 					<processTypes>
-						<web>java $JAVA_OPTS -jar ${project.build.directory}/${project.build.finalName}.jar -Dspring.config.name=heroku</web>
+						<web>java -Dspring.config.name=heroku $JAVA_OPTS -jar ${project.build.directory}/${project.build.finalName}.jar</web>
 					</processTypes>
 				</configuration>
 			</plugin>
