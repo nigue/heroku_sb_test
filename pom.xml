@@ -49,6 +49,17 @@
 		</dependency>
 	</dependencies>
 
+	<profiles>
+		<profile>
+			<id>heroku</id>
+			<activation>
+				<property>
+					<name>heroku</name>
+				</property>
+			</activation>
+		</profile>
+	</profiles>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -69,7 +80,7 @@
 					</includes>
 					<jdkVersion>${java.version}</jdkVersion>
 					<processTypes>
-						<web>java -Dspring.config.name=heroku $JAVA_OPTS -jar ${project.build.directory}/${project.build.finalName}.jar</web>
+						<web>java $JAVA_OPTS -jar ${project.build.directory}/${project.build.finalName}.jar --spring.profiles.active=heroku</web>
 					</processTypes>
 				</configuration>
 			</plugin>
